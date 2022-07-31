@@ -1,0 +1,81 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug Report]: "
+labels: [ "Status: Open", "Type: Bug" ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug!
+  - type: textarea
+    id: summary
+    attributes:
+      label: Brief Summary
+      description: |
+        Describe clearly and concisely a summary of the bug or defect.
+      placeholder: |
+        Please provide a brief summary of the bug or defect you have encountered.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-outcome
+    attributes:
+      label: Expected Outcome
+      description: |
+        What is the expected behaviour after executing the reproducer below?
+      placeholder: |
+        Provide a detailed summary of the expected behaviour the corresponding distribution and/or deployed applications SHOULD exhibit after executing the steps described below
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: current-outcome
+    attributes:
+      label: Current Outcome
+      description: |
+        What is the current behaviour after executing the reproducer below?
+      placeholder: |
+        Provide a detailed summary of the actual behaviour the corresponding distribution and/or deployed applications exhibit after executing the steps described below. Please put emphasis on any unwanted results.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: reproducer
+    attributes:
+      label: Reproducer
+      description: |
+        Share a simple to follow reproducer for this issue on the latest release of Payara Community Edition.
+      placeholder: |
+        Please provide a simple to follow scenario on how to reproduce this issue on the latest release of Payara Community Edition.
+        A reproducer should follow the SSCCE rules: http://www.sscce.org/
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating System
+      description: What operating system and version are you using?
+      placeholder: Windows 10 Pro
+    validations:
+      required: true
+  - type: input
+    id: jdk-version
+    attributes:
+      label: JDK Version
+      description: What JDK version and distribution are you using?
+      placeholder: Example - Zulu JDK 1.8.0_322
+    validations:
+      required: true
+  - type: dropdown
+    id: payara-distribution
+    attributes:
+      label: Payara Distribution
+      description: What distribution of Payara are you using?
+      options:
+        - Payara Server Full Profile
+        - Payara Server Web Profile
+        - Payara Micro
+        - Payara Embedded All
+        - Payara Embedded Web
+        - Payara Docker Image
