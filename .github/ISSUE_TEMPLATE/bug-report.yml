@@ -59,6 +59,7 @@ body:
     attributes:
       label: Payara Distribution
       description: What distribution of Payara are you using?
+      multiple: true
       options:
         - Payara Server Full Profile
         - Payara Server Web Profile
